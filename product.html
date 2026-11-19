@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кофемашина Barista Home — Учебный магазин</title>
+  <meta name="description" content="Карточка товара: кофемашина Barista Home, цена и характеристики.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Учебный магазин</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+        <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html" aria-current="page">Товар</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Кофемашина Barista Home</li>
+      </ol>
+    </nav>
+    <h1>Кофемашина Barista Home</h1>
+    <div class="product-page">
+      <img class="product-page__image" src="images/product-1-640.jpg"
+           srcset="images/product-1-480.jpg 480w, images/product-1-640.jpg 640w, images/product-1-960.jpg 960w"
+           sizes="(max-width: 1023px) 100vw, 50vw" width="640" height="480" alt="Кофемашина Barista Home на светло-синем фоне">
+      <div class="product-page__info">
+        <p class="product-page__price">19 990 руб.</p>
+        <p>Рожковая кофемашина для дома с капучинатором и подогревом чашек.</p>
+        <a class="button" href="order.html">Оставить заявку</a>
+      </div>
+    </div>
+    <section class="section" aria-labelledby="specs-title">
+      <h2 id="specs-title">Характеристики</h2>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <caption>Характеристики товара</caption>
+          <thead>
+            <tr><th scope="col">Параметр</th><th scope="col">Значение</th><th scope="col">Примечание</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Категория</th><td>Кухонная техника</td><td>Кофемашины</td></tr>
+            <tr><th scope="row">Мощность</th><td>1450 Вт</td><td>Быстрый нагрев</td></tr>
+            <tr><th scope="row">Давление</th><td>15 бар</td><td>Для эспрессо</td></tr>
+            <tr><th scope="row">Объём бака</th><td>1,5 л</td><td>Съёмный бак</td></tr>
+            <tr><th scope="row">Наличие</th><td>В наличии</td><td>Склад в Москве</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Разделы главной страницы">
+      <ul class="footer-nav__list">
+        <li><a class="footer-nav__link" href="index.html#advantages">Преимущества</a></li>
+        <li><a class="footer-nav__link" href="index.html#popular">Популярные товары</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__text">&copy; 2026 Учебный проект. Комаров Никита К., ЭФБО-10-25</p>
+  </footer>
+  <button class="back-to-top" type="button" aria-label="Наверх" hidden><span aria-hidden="true">↑</span></button>
+</body>
+</html>
