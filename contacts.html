@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Учебный магазин</title>
+  <meta name="description" content="Контакты учебного интернет-магазина: телефон, e-mail, адрес и часы работы.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Учебный магазин</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+        <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Контакты</li>
+      </ol>
+    </nav>
+    <h1>Контакты</h1>
+    <section class="section" aria-labelledby="contacts-title">
+      <h2 id="contacts-title">Как с нами связаться</h2>
+      <ul class="contacts-list">
+        <li>Телефон: <a href="tel:+79000000000">+7 900 000-00-00</a></li>
+        <li>E-mail: <a href="mailto:shop@example.com">shop@example.com</a></li>
+        <li>Адрес: Москва, учебная улица, 1</li>
+        <li>Часы работы: ежедневно с 9:00 до 18:00</li>
+      </ul>
+      <p>Если у вас есть вопрос по товару, <a href="order.html">оставьте заявку</a>.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Разделы главной страницы">
+      <ul class="footer-nav__list">
+        <li><a class="footer-nav__link" href="index.html#advantages">Преимущества</a></li>
+        <li><a class="footer-nav__link" href="index.html#popular">Популярные товары</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__text">&copy; 2026 Учебный проект. Комаров Никита К., ЭФБО-10-25</p>
+  </footer>
+  <button class="back-to-top" type="button" aria-label="Наверх" hidden><span aria-hidden="true">↑</span></button>
+</body>
+</html>

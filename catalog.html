@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог товаров — Учебный магазин</title>
+  <meta name="description" content="Каталог бытовой техники для кухни с фильтрами и сортировкой.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Учебный магазин</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Каталог</li>
+      </ol>
+    </nav>
+    <h1>Каталог товаров</h1>
+    <div class="catalog-layout">
+      <aside class="catalog-filters" aria-labelledby="filters-title">
+        <h2 class="catalog-filters__title" id="filters-title">Фильтры</h2>
+        <form class="filters-form" action="#">
+          <div class="order-form__group">
+            <label class="order-form__label" for="filter-category">Категория</label>
+            <select class="order-form__select" id="filter-category" name="category">
+              <option value="all">Все товары</option>
+              <option value="kitchen">Техника для кухни</option>
+            </select>
+          </div>
+          <div class="order-form__group">
+            <label class="order-form__label" for="filter-sort">Сортировка</label>
+            <select class="order-form__select" id="filter-sort" name="sort">
+              <option value="popular">По популярности</option>
+              <option value="price-asc">Сначала дешёвые</option>
+              <option value="price-desc">Сначала дорогие</option>
+            </select>
+          </div>
+        </form>
+      </aside>
+      <section class="catalog-products" aria-labelledby="products-title">
+        <h2 id="products-title" class="visually-hidden">Список товаров</h2>
+        <div class="products-grid">
+        <article class="product-card ">
+          <span class="product-card__badge">Хит</span>
+          <img class="product-card__image" src="images/product-1-640.jpg"
+           srcset="images/product-1-480.jpg 480w, images/product-1-640.jpg 640w, images/product-1-960.jpg 960w"
+           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" width="640" height="480" loading="lazy" alt="Кофемашина Barista Home на светло-синем фоне">
+          <div class="product-card__body">
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html">Кофемашина Barista Home</a></h3>
+            <p class="product-card__description">Рожковая кофемашина для дома</p>
+            <p class="product-card__price">19 990 руб.</p>
+            <button class="button product-card__order" type="button" data-product="Кофемашина Barista Home">Заказать</button>
+          </div>
+        </article>
+        <article class="product-card ">
+          
+          <img class="product-card__image" src="images/product-2-640.jpg"
+           srcset="images/product-2-480.jpg 480w, images/product-2-640.jpg 640w, images/product-2-960.jpg 960w"
+           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" width="640" height="480" loading="lazy" alt="Блендер PowerMix 900 на зелёном фоне">
+          <div class="product-card__body">
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html">Блендер PowerMix 900</a></h3>
+            <p class="product-card__description">Погружной блендер на 900 Вт</p>
+            <p class="product-card__price">4 590 руб.</p>
+            <button class="button product-card__order" type="button" data-product="Блендер PowerMix 900">Заказать</button>
+          </div>
+        </article>
+        <article class="product-card product-card--discount">
+          <span class="product-card__badge">Скидка</span>
+          <img class="product-card__image" src="images/product-3-640.jpg"
+           srcset="images/product-3-480.jpg 480w, images/product-3-640.jpg 640w, images/product-3-960.jpg 960w"
+           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" width="640" height="480" loading="lazy" alt="Чайник Smart Kettle на розовом фоне">
+          <div class="product-card__body">
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html">Чайник Smart Kettle</a></h3>
+            <p class="product-card__description">Электрочайник с регулировкой температуры</p>
+            <p class="product-card__price">3 290 руб.</p>
+            <button class="button product-card__order" type="button" data-product="Чайник Smart Kettle">Заказать</button>
+          </div>
+        </article>
+        <article class="product-card product-card--new">
+          <span class="product-card__badge">Новинка</span>
+          <img class="product-card__image" src="images/product-4-640.jpg"
+           srcset="images/product-4-480.jpg 480w, images/product-4-640.jpg 640w, images/product-4-960.jpg 960w"
+           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" width="640" height="480" loading="lazy" alt="Тостер Crispy Two на жёлтом фоне">
+          <div class="product-card__body">
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html">Тостер Crispy Two</a></h3>
+            <p class="product-card__description">Тостер на два отделения</p>
+            <p class="product-card__price">2 790 руб.</p>
+            <button class="button product-card__order" type="button" data-product="Тостер Crispy Two">Заказать</button>
+          </div>
+        </article>
+        <article class="product-card ">
+          
+          <img class="product-card__image" src="images/product-5-640.jpg"
+           srcset="images/product-5-480.jpg 480w, images/product-5-640.jpg 640w, images/product-5-960.jpg 960w"
+           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" width="640" height="480" loading="lazy" alt="Миксер Whisk Pro на фиолетовом фоне">
+          <div class="product-card__body">
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html">Миксер Whisk Pro</a></h3>
+            <p class="product-card__description">Ручной миксер с пятью скоростями</p>
+            <p class="product-card__price">3 990 руб.</p>
+            <button class="button product-card__order" type="button" data-product="Миксер Whisk Pro">Заказать</button>
+          </div>
+        </article>
+        <article class="product-card ">
+          
+          <img class="product-card__image" src="images/product-6-640.jpg"
+           srcset="images/product-6-480.jpg 480w, images/product-6-640.jpg 640w, images/product-6-960.jpg 960w"
+           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" width="640" height="480" loading="lazy" alt="Мультиварка Cook Easy на бирюзовом фоне">
+          <div class="product-card__body">
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html">Мультиварка Cook Easy</a></h3>
+            <p class="product-card__description">Мультиварка на 5 литров</p>
+            <p class="product-card__price">7 490 руб.</p>
+            <button class="button product-card__order" type="button" data-product="Мультиварка Cook Easy">Заказать</button>
+          </div>
+        </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Разделы главной страницы">
+      <ul class="footer-nav__list">
+        <li><a class="footer-nav__link" href="index.html#advantages">Преимущества</a></li>
+        <li><a class="footer-nav__link" href="index.html#popular">Популярные товары</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__text">&copy; 2026 Учебный проект. Комаров Никита К., ЭФБО-10-25</p>
+  </footer>
+
+  <dialog class="order-dialog" aria-labelledby="order-dialog-title">
+    <div class="order-dialog__header">
+      <h2 class="order-dialog__title" id="order-dialog-title">Форма заявки</h2>
+      <button class="order-dialog__close" type="button" aria-label="Закрыть окно"><span aria-hidden="true">×</span></button>
+    </div>
+    <form class="order-form" action="#" method="dialog">
+      <input type="hidden" name="product" id="dialog-product">
+      <p class="order-form__note order-form__group--wide">Товар: <strong class="order-dialog__product">не выбран</strong>. Поля со звёздочкой обязательны.</p>
+      <div class="order-form__group">
+        <label class="order-form__label" for="dialog-name">Имя *</label>
+        <input class="order-form__input" id="dialog-name" name="name" type="text" autocomplete="name" required minlength="2">
+      </div>
+      <div class="order-form__group">
+        <label class="order-form__label" for="dialog-email">E-mail *</label>
+        <input class="order-form__input" id="dialog-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="order-form__group">
+        <label class="order-form__label" for="dialog-phone">Телефон</label>
+        <input class="order-form__input" id="dialog-phone" name="phone" type="tel" autocomplete="tel" pattern="[0-9 +\-]{7,}" title="Не менее 7 символов: цифры, пробел, + и дефис">
+      </div>
+      <div class="order-form__group">
+        <label class="order-form__label" for="dialog-date">Желаемая дата</label>
+        <input class="order-form__input" id="dialog-date" name="date" type="date">
+      </div>
+      <div class="order-form__group order-form__group--wide">
+        <label class="order-form__label" for="dialog-topic">Тема заявки</label>
+        <select class="order-form__select" id="dialog-topic" name="topic">
+          <option>Покупка товара</option>
+          <option>Консультация</option>
+          <option>Гарантия и сервис</option>
+        </select>
+      </div>
+      <div class="order-form__group order-form__group--wide">
+        <label class="order-form__label" for="dialog-comment">Комментарий</label>
+        <textarea class="order-form__textarea" id="dialog-comment" name="comment" maxlength="500"></textarea>
+      </div>
+      <div class="order-form__group order-form__group--wide order-form__group--check">
+        <input id="dialog-agree" name="agree" type="checkbox" required>
+        <label for="dialog-agree">Согласен на обработку персональных данных *</label>
+      </div>
+      <p class="order-form__status order-form__group--wide" role="status"></p>
+      <div class="order-form__group order-form__group--wide">
+        <button class="button" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
+  <button class="back-to-top" type="button" aria-label="Наверх" hidden><span aria-hidden="true">↑</span></button>
+</body>
+</html>
