@@ -17,10 +17,12 @@ kr1-html-css-shop/
 ├── order.html
 ├── contacts.html
 ├── css/
-│   └── style.css
+│   ├── style.css
+│   └── responsive.css
 ├── js/
 │   └── main.js
 ├── images/
+├── lighthouse/
 ├── README.md
 └── .gitignore
 ```
@@ -47,6 +49,12 @@ kr1-html-css-shop/
 - **ПР №6:** меню на Flexbox, сетка товаров на Grid, каталог «фильтры + товары» через `grid-template-areas`.
 - **ПР №7:** БЭМ: `site-nav`, `product-card`, `order-form`, `order-dialog`; без `id`-селекторов и inline-стилей.
 - **ПР №8:** позиционирование: `relative` (карточка), `absolute` (бейджи «Хит», «Скидка», «Новинка»), `sticky` (шапка, фильтры), `fixed` (кнопка «Наверх»), `z-index`; таблица характеристик на `product.html`.
+
+## Практическая работа №12. Адаптивная вёрстка
+- создан `css/responsive.css`, подключён на всех страницах, есть `viewport`;
+- подход Mobile First, медиазапросы `min-width` 640 / 768 / 900 / 1024 px;
+- адаптированы навигация, hero, сетка карточек, каталог с фильтром, форма и таблица;
+- проверены ширины 360, 430, 768, 1024 и 1440 px.
 
 ## Ссылка на опубликованный проект
 GitHub Pages: https://onak2345.github.io/kr1-html-css-shop/

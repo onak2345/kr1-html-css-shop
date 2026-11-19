@@ -1,0 +1,80 @@
+/*
+Адаптивные стили для контрольной работы №3.
+Подход: Mobile First.
+Базовые стили (style.css) рассчитаны на мобильный экран.
+Расширения добавляются через min-width медиазапросы.
+*/
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+img,
+video { max-width: 100%; height: auto; }
+
+body { overflow-x: hidden; }
+
+.section { padding-block: clamp(8px, 2vw, 24px); }
+
+/* Навигация: колонка → строка */
+@media (min-width: 768px) {
+  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); }
+  .site-header__logo { margin-bottom: 0; }
+  .site-nav__list { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .back-to-top { right: 32px; bottom: 32px; }
+}
+
+/* Sticky-шапка только на планшете и больше */
+.site-header { position: static; }
+@media (min-width: 768px) {
+  .site-header { position: sticky; top: 0; z-index: 100; }
+}
+:target { scroll-margin-top: 96px; }
+
+/* Преимущества */
+@media (min-width: 768px) {
+  .advantages { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Hero */
+@media (min-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr) minmax(320px, 520px); }
+}
+
+/* Главная: контент + aside */
+@media (min-width: 1024px) {
+  .page-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-lg); align-items: start; }
+}
+
+/* Сетка карточек */
+@media (min-width: 640px) {
+  .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .products-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Каталог: фильтр сверху → сбоку */
+.catalog-filters { order: -1; }
+@media (min-width: 1024px) {
+  .catalog-layout {
+    grid-template-columns: 280px minmax(0, 1fr);
+    grid-template-areas: "filters products";
+    align-items: start;
+  }
+  .catalog-filters { grid-area: filters; position: sticky; top: 88px; order: initial; }
+  .catalog-products { grid-area: products; }
+}
+
+/* Страница товара */
+@media (min-width: 768px) {
+  .product-page { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+}
+
+/* Форма: 1 колонка → 2 колонки */
+@media (min-width: 768px) {
+  .order-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .order-form__group--wide { grid-column: 1 / -1; }
+}
