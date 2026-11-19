@@ -20,6 +20,7 @@ kr1-html-css-shop/
 │   ├── style.css
 │   └── responsive.css
 ├── js/
+│   ├── data.js
 │   └── main.js
 ├── images/
 ├── lighthouse/
@@ -67,6 +68,18 @@ kr1-html-css-shop/
 - адаптивная вёрстка страниц: отсутствие горизонтального скролла проверено на пяти ширинах;
 - responsive images: `srcset` и `sizes` у карточек товаров и страницы товара, `picture` у hero-блока, `width`/`height` и `loading="lazy"`;
 - адаптивные формы (1 колонка на телефоне, 2 колонки с 768 px) и таблица характеристик (`.table-wrapper` с прокруткой).
+
+## Практическая работа №15. JavaScript
+Выполнено:
+- создана папка `js`, файлы `js/data.js` и `js/main.js`, подключены через `defer` на всех страницах;
+- создан объект товара `product` (строки, числа, логическое значение);
+- использованы арифметические операторы, операторы сравнения и логические операторы;
+- функции `formatPrice`, `calculateDiscount`, `calculateFinalPrice`, `getProductStatus`, `createProductSummary`;
+- результаты функций выводятся в консоль (`console.log`, `console.table`);
+- сообщение и описание товара выводятся на главной странице через `textContent`.
+
+## Принцип безопасного вывода данных
+Для вывода пользовательских данных и данных, которые в будущем могут прийти из формы, `localStorage` или API, используется `textContent`, а не `innerHTML`. `innerHTML` воспринимает строку как HTML, поэтому строка вида `<img src=x onerror=alert(1)>` выполнила бы код. `textContent` показывает её как обычный текст.
 
 ## Ссылка на опубликованный проект
 GitHub Pages: https://onak2345.github.io/kr1-html-css-shop/

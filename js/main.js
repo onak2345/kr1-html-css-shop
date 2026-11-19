@@ -1,3 +1,64 @@
+// ===== ПР15: типы данных, операторы, функции =====
+console.log('Файл main.js подключён');
+console.log(product);
+console.table(product);
+
+// Форматирование цены: возвращает строку
+function formatPrice(price) {
+  return `${price.toLocaleString('ru-RU')} руб.`;
+}
+
+// Размер скидки (арифметические операторы)
+function calculateDiscount(price, discountPercent) {
+  return price * discountPercent / 100;
+}
+
+// Итоговая цена с учётом скидки
+function calculateFinalPrice(price, discountPercent) {
+  const discountValue = calculateDiscount(price, discountPercent);
+  return price - discountValue;
+}
+
+// Статус товара (оператор сравнения и логические операторы)
+function getProductStatus(product) {
+  if (product.isAvailable && product.price > 0) {
+    return 'В наличии';
+  }
+  return 'Нет в наличии';
+}
+
+// Краткое описание товара
+function createProductSummary(product) {
+  const finalPrice = calculateFinalPrice(product.price, product.discountPercent);
+  const status = getProductStatus(product);
+  return `${product.title}: ${formatPrice(finalPrice)}, статус: ${status}.`;
+}
+
+// Вывод результатов функций в консоль
+const discountValue = calculateDiscount(product.price, product.discountPercent);
+const finalPrice = calculateFinalPrice(product.price, product.discountPercent);
+const isHighRated = product.rating >= 4.5 && product.discountPercent > 0;
+const productSummary = createProductSummary(product);
+
+console.log('Цена:', formatPrice(product.price));
+console.log('Размер скидки:', formatPrice(discountValue));
+console.log('Итоговая цена:', formatPrice(finalPrice));
+console.log('Статус:', getProductStatus(product));
+console.log('Высокий рейтинг и есть скидка:', isHighRated);
+console.log(productSummary);
+
+// Безопасный вывод на страницу через textContent (на страницах без блока элементов нет)
+const messageElement = document.querySelector('.js-message');
+const productOutputElement = document.querySelector('.product-output');
+
+if (messageElement) {
+  messageElement.textContent = 'JavaScript подключён корректно.';
+}
+
+if (productOutputElement) {
+  productOutputElement.textContent = productSummary;
+}
+
 // ===== Модальное окно заявки и кнопка «Наверх» =====
 const orderDialog = document.querySelector('.order-dialog');
 
